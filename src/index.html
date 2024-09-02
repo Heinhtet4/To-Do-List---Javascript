@@ -5,9 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
     <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
 </head>
-<body>
+<body class="bg-slate-200">
     
+    <main class="max-w-[400px] min-h-[430px] bg-slate-100 opacity-80 backdrop-blur-[100px] mx-auto mt-10 p-10">
+        <header class="">
+            <h1 class="font-mono text-3xl font-bold text-slate-800"> Task Lists</h1>
+        </header>
+        <section class="flex justify-between mt-3 border-[1.5px] border-slate-700">
+            <input type="text" class="bg-slate-100 px-2 border flex-grow outline-none text-base font-mono text-slate-700" id="taskInput">
+            <button class="bg-slate-700 size-12 hover:bg-slate-800 transition-colors duration-300"
+            id="addTaskBtn">
+                <i class="ri-add-large-line text-slate-100"></i>
+            </button>
+        </section>
+        <section class="mt-3">
+            <div class="flex justify-between items-center">
+                <h4 class="text-xl font-bold font-sans"> Your Lists </h4>
+                <div class="status bg-slate-700 text-slate-100 text-sm flex justify-center items-center px-5 py-1 rounded-full gap-x-1">
+                   <span id="doneTask"> 0 </span>
+                   <span> / </span>
+                   <span id="taskTotal"> 0 </span>
+                </div>
+            </div>
+            <div class="mt-3" id="listGroup">
+
+                <div class="empty-stage text-center border-[1.5px] pb-2 last:block hidden">
+                    <img src="./svg/empty.svg" class="size-40  opacity-80 mx-auto" alt="">
+                    <p class="text-center text-slate-500">There is no job yet.</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
 
     <script src="app.js"></script>
 </body>
